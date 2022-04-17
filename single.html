@@ -48,15 +48,34 @@
               </div>
             </div>
             <div class="col-md-2 text-end">
-              <div class="h-menu">
+              <a class="h-menu" id="hamburger-menu" onclick="openMenu()">
                 <span></span>
-              </div>
+              </a>
+              <i class="fas fa-times" id="cross" onclick="openMenu2()"></i>
             </div>
           </div>
         </nav>
       </div>
     </header>
     <!-- header section code end here -->
+    <!-- menu-bar section code start here -->
+    <div id="sidemenu">
+      <!-- crossbar -->
+      <a onclick="openMenu()">
+        <i class="fas fa-times"></i>
+      </a>
+        <div class="menu-bar">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="category.html">Categories</a></li>
+            <li><a href="single.html">Travel</a></li>
+            <li><a href="single.html">Food</a></li>
+            <li><a href="single.html">Tehnology</a></li>
+            <li><a href="single.html">Business</a></li>
+          </ul>
+        </div>
+    </div>
+    <!-- menu-bar section code end here -->
     <!-- post section code start here -->
     <section id="post">
       <div class="container">
@@ -243,5 +262,20 @@
     </footer>
     <!-- footer section code end here -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+  <script>
+   var sidebar = document.getElementById('sidemenu');
+   var menuIcon = document.getElementById('hamburger-menu');
+   var cross = document.getElementById('cross');
+   function openMenu(){
+    menuIcon.style.display="none";
+    cross.style.display="block";
+    sidebar.classList.toggle('extra');
+   }
+   function openMenu2(){
+    menuIcon.style.display="block";
+    cross.style.display="none";
+    sidebar.classList.toggle('extra');
+   }
+  </script>
   </body>
 </html>
